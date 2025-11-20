@@ -34,5 +34,5 @@
 
 </html>
 <?php
-// include "market_update.php";
+// include_once "market_update.php";
 ?>

@@ -34,5 +34,6 @@
 
 </html>
 <?php
-// include "market_update.php";
+// require "market_update2.php";
+// require "bank-nifty.php";
 ?>
