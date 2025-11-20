@@ -38,6 +38,6 @@
     }
     if (now >= marketclosed) {
 
-        document.getElementById("mstatus").innerHTML = "Open<br><br>";
+        document.getElementById("mstatus").innerHTML = "closed<br><br>";
     }
 </script>
