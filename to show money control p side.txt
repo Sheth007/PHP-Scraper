@@ -1,7 +1,0 @@
-first load the whole page
-then go to network tab
-search for the chart and right click on 2nd or 3rd and open in source
-after that (its's js) then theres an analyst image named row
-copy the img link and past it into browser 
-you will get the premium side of that
-also analyst commets you can see that too.
