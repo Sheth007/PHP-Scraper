@@ -19,11 +19,13 @@
     marketclose.setHours(15, 30, 0, 0);
 
     if (now >= prestart && now < preend) {
-        setInterval(banknifty, 500);
-        setInterval(nifty50, 500);
+        setInterval(sensex, 1000);
+        setInterval(banknifty, 1000);
+        setInterval(nifty50, 1000);
     }
     if (now >= open && now < close) {
-        setInterval(banknifty, 500);
-        setInterval(nifty50, 500);
+        setInterval(sensex, 1000);
+        setInterval(banknifty, 1000);
+        setInterval(nifty50, 1000);
     }
 </script>

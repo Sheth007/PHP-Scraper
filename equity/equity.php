@@ -1,15 +1,18 @@
 <script>
+    let hpprice = null;
     function hul() {
-
-        fetch('https://priceapi.moneycontrol.com/pricefeed/notapplicable/inidicesindia/in%3Bnbx')
-            .then(response => response.json())  // Parse the response as JSON
+        fetch('https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/HL')
+            .then(response => response.json())
             .then(data => {
-                // fetching the 'lastTradedPrice' is directly in the response object
                 const price = data.data.pricecurrent;
-
+                const pbox = document.getElementById('hul');
                 if (price) {
-                    document.getElementById('bn-current-price').innerText = price;
+                    pbox.innerText = price;
+                    pbox.style.background = hpprice === null ? "transparent" : price > hpprice ? "green" : price < hpprice ? "red" : "transparent";
+
                     // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    hpprice = price;
                 } else {
                     console.log('Price data not found!');
                 }
@@ -20,14 +23,69 @@
             });
     }
 
-    function nifty50() {
-        fetch('https://priceapi.moneycontrol.com/pricefeed/notapplicable/inidicesindia/in%3BNSX')
-            .then(response => response.json())  // Parse the response as JSON
+    let gpprice = null;
+    function bgv() {
+        fetch('https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/BGV')
+            .then(response => response.json())
             .then(data => {
-                // fetching the 'lastTradedPrice' is directly in the response object
                 const price = data.data.pricecurrent;
-
+                const pbox = document.getElementById('bgv');
                 if (price) {
+                    pbox.innerText = price;
+                    pbox.style.background = gpprice === null ? "transparent" : price > gpprice ? "green" : price < gpprice ? "red" : "transparent";
+
+                    // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    gpprice = price;
+                } else {
+                    console.log('Price data not found!');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching price:', error);
+                // document.getElementById('current-price').innerText = 'Error loading data';
+            });
+    }
+
+    let iipprice = null;
+    function iil() {
+        fetch('https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/IIL04')
+            .then(response => response.json())
+            .then(data => {
+                const price = data.data.pricecurrent;
+                const pbox = document.getElementById('iil');
+                if (price) {
+                    pbox.innerText = price;
+                    pbox.style.background = iipprice === null ? "transparent" : price > iipprice ? "green" : price < iipprice ? "red" : "transparent";
+
+                    // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    iipprice = price;
+                } else {
+                    console.log('Price data not found!');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching price:', error);
+                // document.getElementById('current-price').innerText = 'Error loading data';
+            });
+    }
+
+    let igpprice = null;
+    function ig() {
+        fetch('https://priceapi.moneycontrol.com/pricefeed/nse/equitycash/IGE02')
+            .then(response => response.json())
+            .then(data => {
+                const price = data.data.pricecurrent;
+                const pbox = document.getElementById('ige');
+                if (price) {
+                    pbox.innerText = price;
+                    pbox.style.background = igpprice === null ? "transparent" : price > igpprice ? "green" : price < igpprice ? "red" : "transparent";
+
+                    // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    igpprice = price;
+                } else {
                     console.log('Price data not found!');
                 }
             })
@@ -38,16 +96,20 @@
     }
 
     hul();
-    nifty50();
+    bgv();
+    iil();
+    ig();
 </script>
 
 <body>
-    <h4>Index</h4>
-    <div>Bank Nifty : <span id="bn-current-price">Loading...</span></div><br>
-    <div>Nifty 50 : <span id="n5-current-price">Loading...</span></div><br>
+    <h4>Equity</h4>
+    <div>Hindustan Uniliver : <span id="hul">Loading...</span></div><br>
+    <div>Groww : <span id="bgv">Loading...</span></div><br>
+    <div>Inox India : <span id="iil">Loading...</span></div><br>
+    <div>Inox Green : <span id="ige">Loading...</span></div><br>
 </body>
 
 </html>
 <?php
-// require "market_update.php";
+require "e_market_update.php";
 ?>
