@@ -43,6 +43,7 @@
 <body>
     <div class="status">
         <?php include "market_status.php"; ?>
+        <center><a href="add_new.html"><button type="button">Add new Stock via coding</button></a></center><br>
     </div>
 
     <div class="container">

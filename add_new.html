@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new stock</title>
+  </head>
+  <body>
+    <div class="con1">
+      <pre>let <input type="text" placeholder="prevous price var name" id="f" name="f"> = null;
+
+function <input type="text" placeholder="function name" name="s" id="s">() {
+        fetch(<input type="text" placeholder="api" name="t" id="t">)
+            .then(response => response.json())
+            .then(data => {
+                const <input type="text" placeholder="price alternative" id="n"> = data.data.pricecurrent;
+                <input type="text" placeholder="pbox alternative" id="thirteen"> = document.getElementById('<input type="text" placeholder="div class name" id="fo">');
+                if (auto) {
+                    auto.innerText = price;
+                    auto.style.background = auto === null ? "transparent" : price > auto ? "green" : price < auto ? "red" : "transparent";
+
+                    // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    hpprice = price;
+                } else {
+                    console.log('Price data not found!');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching price:', error);
+                // document.getElementById('current-price').innerText = 'Error loading data';
+            });
+    }
+
+    auto();
+</pre>
+<button type="button" id="g" onclick="occ()">Generate</button>
+    </div>
+
+    <div class="con2">
+        <pre>let <span id="one">auto</span> = null;
+
+function <span id="two">auto</span>() {
+        fetch(<span id="three">auto</span>)
+            .then(response => response.json())
+            .then(data => {
+                const <span id="twelve">auto</span> = data.data.pricecurrent;
+                <span id="13">auto</span> = document.getElementById('<span id="four">auto</span>');
+                if (<span id="nine">auto</span>) {
+                    <span id="14">auto</span>.innerText = <span id="18">auto</span>;
+                    <span id="15">auto</span>.style.background = <span id="five">auto</span> === null ? "transparent" : <span id="ten">auto</span> > <span id="six">auto</span> ? "green" : <span id="eleven">auto</span> < <span id="seven">auto</span> ? "red" : "transparent";
+
+                    // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
+
+                    <span id="16">auto</span> = <span id="17">auto</span>;
+                } else {
+                    console.log('Price data not found!');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching price:', error);
+                // document.getElementById('current-price').innerText = 'Error loading data';
+            });
+    }
+
+    <span id="eight">auto</span>();</div>
+  </body>
+</html>
+<script>
+  function occ() {
+    const ff = document.getElementById("f").value;
+    document.getElementById("one").innerHTML = ff;
+    document.getElementById("five").innerHTML = ff;
+    document.getElementById("six").innerHTML = ff;
+    document.getElementById("seven").innerHTML = ff;
+    document.getElementById("16").innerHTML = ff;
+
+    const ss = document.getElementById("s").value;
+    document.getElementById("two").innerHTML = ss;
+    document.getElementById("eight").innerHTML = ss;
+
+    const tt = document.getElementById("t").value;
+    document.getElementById("three").innerHTML = tt;
+    
+    const fo = document.getElementById("fo").value;
+    document.getElementById("four").innerHTML = fo;
+
+    const nn = document.getElementById('n').value;
+    document.getElementById("nine").innerHTML = nn;
+    document.getElementById("ten").innerHTML = nn;
+    document.getElementById("eleven").innerHTML = nn;
+    document.getElementById("twelve").innerHTML = nn;
+    document.getElementById("17").innerHTML = nn;
+    document.getElementById("18").innerHTML = nn;
+
+    const th = document.getElementById('thirteen').value;
+    document.getElementById("13").innerHTML = th;
+    document.getElementById("14").innerHTML = th;
+    document.getElementById("15").innerHTML = th;
+
+
+     const preContent = document.querySelector('.con2 pre').innerText;
+
+    navigator.clipboard.writeText(preContent)
+      .then(() => {
+        window.location.href = "index.php";
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  }
+</script>

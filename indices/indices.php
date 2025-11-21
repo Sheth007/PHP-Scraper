@@ -7,15 +7,15 @@
             .then(data => {
                 // fetching the 'lastTradedPrice' is directly in the response object
                 const sxprice = data.data.pricecurrent;
-                bnpbox = document.getElementById('sn-current-price');
+                sepbox = document.getElementById('sn-current-price');
                 // document.getElementById('bn-current-price') = price;
 
                 if (sxprice) {
-                    bnpbox.innerText = sxprice;
-                    bnpbox.style.background = snprice === null ? "transparent" : sxprice > snprice ? "green" : sxprice < snprice ? "red" : "transparent";
+                    sepbox.innerText = sxprice;
+                    sepbox.style.background = snprice === null ? "transparent" : sxprice > snprice ? "green" : sxprice < snprice ? "red" : "transparent";
                     // console.log('Price updated:', price, 'at', new Date().toLocaleTimeString());
 
-                    snprice = sxprice
+                    snprice = sxprice;
                 } else {
                     console.log('Price data not found!');
                 }
