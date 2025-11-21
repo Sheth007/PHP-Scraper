@@ -29,15 +29,12 @@
     if (now >= mprestart && now < mpreend) {
 
         document.getElementById("mstatus").innerHTML = "Pre-Open<br><br>";
-        // setInterval(fetchPrice, 500);
     }
     if (now >= mopen && now < mclose) {
 
         document.getElementById("mstatus").innerHTML = "Open<br><br>";
-        // setInterval(fetchPrice, 500);
     }
     if (now >= marketclosed) {
-
         document.getElementById("mstatus").innerHTML = "closed<br><br>";
     }
 </script>
