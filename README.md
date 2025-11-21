@@ -127,10 +127,6 @@ project-root/
 - All new stock code should be added before the closing `</script>` tag
 - API endpoints are sourced from MoneyControl
 
-## License
+## 🛑 Stop
 
-[Add your license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
+- This is just for education purposes only the owner of the repo. is not taking any responsibilities if you misuse it.
